@@ -1,0 +1,24 @@
+.card-body{
+     min-height: 250px; 
+      
+     border: 1px solid blue;
+     
+  }
+  .body{
+    box-shadow: 5px 5px 10px #aeb1b5;
+  }
+  .title {
+    font-size:14;
+  }
+ .pos {
+    margin-bottom: 12,
+  }
+  .paper {
+    padding: 10px;
+    
+    margin: 20px;
+   
+  }
+  .MuiPaper-root{
+    background-color: #e1c8c8;
+  }

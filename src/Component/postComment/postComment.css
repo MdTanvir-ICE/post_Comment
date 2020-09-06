@@ -1,0 +1,11 @@
+.root1{
+    flex-grow: 1;
+}
+.allPost{
+   
+    margin: 50px;
+}
+.allPost h1{
+    text-align: center;
+    color: rgb(21, 14, 29);
+}

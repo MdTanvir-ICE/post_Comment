@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import PostComment from './Component/postComment/PostComment';
+import PostDetail from './Component/postDetail/PostDetail';
+import PostCommentControl from './Component/PostCommentControl/PostCommentControl';
+import Navbar from './Component/NavBar/Navbar';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <Navbar></Navbar>
+      <Switch>
+        <Route exact path="/">
+          <PostComment></PostComment>
+        </Route>
+        <Route path="/postDetail/:id">
+          <PostDetail></PostDetail>
+        </Route>
+        <Route path="/post&comment/:id">
+          <PostCommentControl></PostCommentControl>
+        </Route>
+      </Switch>
+    </Router>
+
   );
 }
 
